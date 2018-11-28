@@ -16,6 +16,8 @@ declare module 'react-native-swiper' {
         autoplay?: boolean
         // Called with the new index when the user swiped
         onIndexChanged?: any
+        // Called when the swiper's layout has loaded
+        onLayout?: any
 
         // Custom basic style & content
         // Set to true enable auto play mode.
@@ -102,5 +104,7 @@ declare module 'react-native-swiper' {
     }
 
     export default class Swiper extends Component<SwiperProps, any> {
+        // Scroll by relative index
+        scrollBy: (index?: number, animated?: boolean) => void
     }
 }
