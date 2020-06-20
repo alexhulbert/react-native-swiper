@@ -11,10 +11,10 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
-  ViewPagerAndroid,
   Platform,
   ActivityIndicator
 } from 'react-native'
+import ViewPagerAndroid from '@react-native-community/viewpager'
 
 /**
  * Default styles
@@ -258,6 +258,7 @@ export default class extends Component {
 
     this.internals = {
       ...this.internals,
+      offset: initState.offset,
       isScrolling: false
     };
     return initState
